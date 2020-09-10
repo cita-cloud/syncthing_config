@@ -58,8 +58,8 @@ fn insert_gui(config: &mut Configuration, chain_name: &str) {
     config.gui.api_key = chain_name.to_string();
 }
 
-fn insert_options(config: &mut Configuration, peer: &Peer) {
-    config.options.listen_addresses = vec![format!("quic://0.0.0.0:{}", peer.port)];
+fn insert_options(config: &mut Configuration) {
+    config.options.listen_addresses = vec!["quic://0.0.0.0:22000".to_string()];
 }
 
 use std::fs::File;
@@ -111,14 +111,14 @@ fn main() {
 
     println!("version: {}", config.version);
 
-    for (index, peer) in peers.iter().enumerate() {
+    for (index, _peer) in peers.iter().enumerate() {
         let mut node_config = config.clone();
         insert_folder_device(&mut node_config, &ids);
         insert_devices(&mut node_config, &chain_name, &ids, &peers);
         insert_gui(&mut node_config, &chain_name);
-        insert_options(&mut node_config, peer);
+        insert_options(&mut node_config);
 
-        let path = format!("node-{}-config.json", index);
+        let path = format!("node{}-config.json", index);
         let node_config_path = Path::new(&path);
         let ret = File::create(node_config_path);
         if let Err(e) = ret {
