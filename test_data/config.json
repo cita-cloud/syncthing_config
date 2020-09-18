@@ -55,7 +55,7 @@
       ],
       "rescanIntervalS": 3600,
       "fsWatcherEnabled": true,
-      "fsWatcherDelayS": 10,
+      "fsWatcherDelayS": 1,
       "ignorePerms": false,
       "autoNormalize": true,
       "minDiskFree": {
