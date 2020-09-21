@@ -46,6 +46,50 @@
       "junctionsAsDirs": false
     },
     {
+      "id": "proposals",
+      "label": "",
+      "filesystemType": "basic",
+      "path": "/var/syncthing/proposals",
+      "type": "sendreceive",
+      "devices": [
+      ],
+      "rescanIntervalS": 300,
+      "fsWatcherEnabled": true,
+      "fsWatcherDelayS": 1,
+      "ignorePerms": false,
+      "autoNormalize": true,
+      "minDiskFree": {
+        "value": 1,
+        "unit": "%"
+      },
+      "versioning": {
+        "type": "",
+        "params": {},
+        "cleanupIntervalS": 0
+      },
+      "copiers": 0,
+      "pullerMaxPendingKiB": 0,
+      "hashers": 0,
+      "order": "random",
+      "ignoreDelete": true,
+      "scanProgressIntervalS": 0,
+      "pullerPauseS": 0,
+      "maxConflicts": 10,
+      "disableSparseFiles": false,
+      "disableTempIndexes": false,
+      "paused": false,
+      "weakHashThresholdPct": 25,
+      "markerName": ".stfolder",
+      "copyOwnershipFromParent": false,
+      "modTimeWindowS": 0,
+      "maxConcurrentWrites": 0,
+      "disableFsync": false,
+      "blockPullOrder": "standard",
+      "copyRangeMethod": "standard",
+      "caseSensitiveFS": true,
+      "junctionsAsDirs": false
+    },
+    {
       "id": "blocks",
       "label": "",
       "filesystemType": "basic",
@@ -55,7 +99,7 @@
       ],
       "rescanIntervalS": 3600,
       "fsWatcherEnabled": true,
-      "fsWatcherDelayS": 1,
+      "fsWatcherDelayS": 15,
       "ignorePerms": false,
       "autoNormalize": true,
       "minDiskFree": {

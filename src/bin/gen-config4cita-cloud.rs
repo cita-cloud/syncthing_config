@@ -7,7 +7,7 @@ struct Peer {
     port: u16,
 }
 
-fn insert_folder_device(config: &mut Configuration, ids: &Vec<String>) {
+fn insert_folder_device(config: &mut Configuration, ids: &[String]) {
     let mut devices: Vec<FolderDeviceConfiguration> = Vec::new();
     for id in ids {
         let device = FolderDeviceConfiguration {
@@ -24,8 +24,8 @@ fn insert_folder_device(config: &mut Configuration, ids: &Vec<String>) {
 fn insert_devices(
     config: &mut Configuration,
     chain_name: &str,
-    ids: &Vec<String>,
-    peers: &Vec<Peer>,
+    ids: &[String],
+    peers: &[Peer],
 ) {
     let mut devices: Vec<DeviceConfiguration> = Vec::new();
     for (i, peer) in peers.iter().enumerate() {
@@ -126,7 +126,11 @@ fn main() {
             return;
         }
         let mut f = ret.unwrap();
-        f.write_all(serde_json::to_string_pretty(&node_config).unwrap().as_bytes())
-            .unwrap();
+        f.write_all(
+            serde_json::to_string_pretty(&node_config)
+                .unwrap()
+                .as_bytes(),
+        )
+        .unwrap();
     }
 }
