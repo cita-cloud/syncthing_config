@@ -9,7 +9,7 @@
       "type": "sendreceive",
       "devices": [
       ],
-      "rescanIntervalS": 300,
+      "rescanIntervalS": 0,
       "fsWatcherEnabled": true,
       "fsWatcherDelayS": 1,
       "ignorePerms": false,
@@ -53,7 +53,7 @@
       "type": "sendreceive",
       "devices": [
       ],
-      "rescanIntervalS": 300,
+      "rescanIntervalS": 0,
       "fsWatcherEnabled": true,
       "fsWatcherDelayS": 1,
       "ignorePerms": false,
@@ -97,9 +97,9 @@
       "type": "sendreceive",
       "devices": [
       ],
-      "rescanIntervalS": 3600,
+      "rescanIntervalS": 0,
       "fsWatcherEnabled": true,
-      "fsWatcherDelayS": 15,
+      "fsWatcherDelayS": 1,
       "ignorePerms": false,
       "autoNormalize": true,
       "minDiskFree": {
